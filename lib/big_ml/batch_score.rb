@@ -14,10 +14,10 @@ module BigML
     class << self
       def create(anomaly, dataset, options = {})
         arguments = { dataset: dataset }
-        if cluster.start_with? 'anomaly'
+        if anomaly.start_with? 'anomaly'
           arguments[:anomaly] = anomaly
         else
-          raise ArgumentError, "Expected cluster, got #{anomaly}"
+          raise ArgumentError, "Expected anomaly, got #{anomaly}"
         end
         response = client.post("/#{resource_name}", {}, arguments.merge(options))
         self.new(response) if response.success?
