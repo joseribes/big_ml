@@ -3,10 +3,12 @@ require 'big_ml/base'
 module BigML
   class BatchCentroid < Base
     BATCH_CENTROID_PROPERTIES = [
-      :category, :code, :created, :credits, :dataset, :dataset_status,
-      :description, :fields, :dataset, :cluster, :model_status, :name,
-      :objective_fields, :prediction, :prediction_path, :private, :resource,
-      :source, :source_status, :status, :tags, :updated
+      :all_fields, :category, :centroid_name, :code, :cluster, :cluster_status,
+      :created, :credits, :dataset, :dataset_status, :description, :dev,
+      :distance, :distance_name, :fields_map, :header, :locale, :name, 
+      :output_dateset, :output_dataset_resource, :output_dataset_status,
+      :output_fields, :private, :project, :resource, :rows, :separator,
+      :shared, :size, :status, :subscription, :tags, :type, :updated
     ]
 
     attr_reader *BATCH_CENTROID_PROPERTIES

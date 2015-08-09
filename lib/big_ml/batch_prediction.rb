@@ -3,10 +3,16 @@ require 'big_ml/base'
 module BigML
   class BatchPrediction < Base
     BATCH_PREDICTION_PROPERTIES = [
-      :category, :code, :created, :credits, :dataset, :dataset_status,
-      :description, :fields, :dataset, :model, :model_status, :name,
-      :objective_fields, :prediction, :prediction_path, :private, :resource,
-      :source, :source_status, :status, :tags, :updated
+      :all_fields, :category, :code, :combiner, :confidence, :confidence_name,
+      :confidence_threshold, :created, :credits, :dataset, :dataset_status,
+      :description, :dev, :ensemble, :fields_map, :header, :locale,
+      :missing_stratgy, :model, :model_status, :model_type, :name,
+      :negative_class, :negative_class_confidence, :number_of_models,
+      :objective_field, :output_dataset, :output_dataset_resource,
+      :output_dataset_status, :output_fields, :positive_class,
+      :prediction_name, :private, :project, :resource, :rows, :separator,
+      :shared, :size, :status, :subscription, :tags, :threshold, :type,
+      :updated
     ]
 
     attr_reader *BATCH_PREDICTION_PROPERTIES
